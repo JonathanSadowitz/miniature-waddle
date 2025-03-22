@@ -1,6 +1,7 @@
 <html>
     <head>
         <!--HTML file auto generated using EmulatorJS codehelper-->
+        <link rel="manifest" href="manifest.json">
         <style>
             body, html {
                 margin: 0;
@@ -21,6 +22,19 @@
             EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
             EJS_gameUrl = "Devil Crash - Naxat Pinball (Japan) (En).pce";
             EJS_biosUrl = "syscard3.pce";
+
+            // Register the service worker
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('service-worker.js')
+                        .then((registration) => {
+                            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                        })
+                        .catch((error) => {
+                            console.log('ServiceWorker registration failed: ', error);
+                        });
+                });
+            }
         </script>
         <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
     </body>
