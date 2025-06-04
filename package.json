@@ -1,0 +1,7 @@
+{
+  "name": "miniature-waddle",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node tests/manifest.test.js"
+  }
+}
