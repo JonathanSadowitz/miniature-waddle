@@ -7,7 +7,7 @@ self.addEventListener('install', (event) => {
                 '/manifest.json',
                 '/icon-192x192.png',
                 '/icon-512x512.png',
-                // Add other assets you want to cache
+                // Include additional assets here if needed
             ]);
         })
     );
